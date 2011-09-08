@@ -9,6 +9,6 @@
 
 Taco is basically just Jeremy's docco but altered to work with bootstrap. It was a quick thing i hacked up as a proof of concept. If you like the direction it was going please fork and make it more awesome!
 
-You can check out an taco in action here: http:fat.github.com/taco
+You can check out taco in action here: http:fat.github.com/taco
 
 At it's core it's still a quick-and-dirty, hundred-line-long, documentation generator.
