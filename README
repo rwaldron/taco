@@ -1,0 +1,14 @@
+ __
+/\ \__
+\ \ ,_\    __      ___    ___
+ \ \ \/  /'__`\   /'___\ / __`\
+  \ \ \_/\ \L\.\_/\ \__//\ \L\ \
+   \ \__\ \__/.\_\ \____\ \____/
+    \/__/\/__/\/_/\/____/\/___/
+
+
+Taco is basically just Jeremy's docco but altered to work with bootstrap. It was a quick thing i hacked up as a proof of concept. If you like the direction it was going please fork and make it more awesome!
+
+You can check out an taco in action here: http:fat.github.com/taco
+
+At it's core it's still a quick-and-dirty, hundred-line-long, documentation generator.

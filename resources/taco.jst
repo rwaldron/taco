@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-1.2.0.min.css">
+  <link rel="stylesheet" media="all" href="taco.css" />
+</head>
+<body <% if (sources.length > 1) { %> <%= "id='has-topbar'" %> <% } %>>
+    <div class="topbar">
+      <div class="topbar-inner">
+        <div class="container-fluid">
+          <h3><a href="#">Documentation</a></h3>
+          <% if (sources.length > 1) { %>
+            <ul class="nav">
+              <% for (var i=sources.length; i--;) { %>
+                <% var source = sources[i]; %>
+                <li>
+                  <a class="source" href="<%= path.basename(destination(source)) %>">
+                    <%= path.basename(source) %>
+                  </a>
+                </li>
+              <% } %>
+            </ul>
+          <% } %>
+        </div>
+      </div>
+    </div>
+
+  <div class="container-fluid">
+    <div class="sidebar">
+      <%= sections[1].docs_html %>
+    </div>
+    <div class="content">
+      <h1><%= title %></h1>
+
+      <% for (var i=0, l=sections.length; i<l; i++) { %>
+        <% if (i == 1) { continue; } %>
+        <% var section = sections[i]; %>
+        <section id="section-<%= i + 1 %>">
+          <%= section.docs_html %>
+          <% if (i > 1) { %>
+          <p>
+            <a href="#">Return to top</a>
+          </p>
+          <% } %>
+        </section>
+      <% } %>
+    </div>
+  </div>
+</body>
+</html>

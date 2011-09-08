@@ -1,0 +1,63 @@
+<!DOCTYPE html> <html> <head>   <title>taco.coffee</title>   <meta http-equiv="content-type" content="text/html; charset=UTF-8">   <link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-1.2.0.min.css">   <link rel="stylesheet" media="all" href="taco.css" /> </head> <body >     <div class="topbar">       <div class="topbar-inner">         <div class="container-fluid">           <h3><a href="#">Documentation</a></h3>                    </div>       </div>     </div>    <div class="container-fluid">     <div class="sidebar">       <h3>Contents</h3>
+
+<ul>
+<li><a href="#">Introduction</a>
+<ul><li><a href="#section-3">Partners in Crime</a></li>
+<li><a href="#section-4">How it works</a></li>
+<li><a href="http://jashkenas.github.com/docco/">Original Docco</a></li></ul></li>
+</ul>     </div>     <div class="content">       <h1>taco.coffee</h1>                                   <section id="section-1">           <p><strong>taco</strong> is a quick-and-dirty, hundred-line-long, literate-programming-style
+documentation generator. It produces HTML that displays your comments
+alongside your code. Comments are passed through
+<a href="http://daringfireball.net/projects/markdown/syntax">Markdown</a>, and code is
+passed through <a href="http://pygments.org/">Pygments</a> syntax highlighting.
+This page is the result of running taco against its own source file.</p>
+
+<p>If you install taco, you can run it from the command-line:</p>
+
+<pre><code>taco src/*.coffee
+</code></pre>
+
+<p>...will generate an HTML documentation page for each of the named source files,
+with a menu linking to the other pages, saving it into a <code>docs</code> folder.</p>
+
+<p>The <a href="http://github.com/fat/taco">source for taco</a> is available on GitHub,
+and released under the MIT license.</p>
+
+<p>To install taco, first make sure you have <a href="http://nodejs.org/">Node.js</a>,
+<a href="http://pygments.org/">Pygments</a> (install the latest dev version of Pygments
+from <a href="http://dev.pocoo.org/hg/pygments-main">its Mercurial repo</a>), and
+<a href="http://coffeescript.org/">CoffeeScript</a>. Then, with NPM:</p>
+
+<pre><code>sudo npm install taco
+</code></pre>                    </section>                                           <section id="section-3">           <h3>Partners in Crime:</h3>
+
+<ul>
+<li><p>If <strong>Node.js</strong> doesn't run on your platform, or you'd prefer a more
+convenient package, get <a href="http://github.com/rtomayko">Ryan Tomayko</a>'s
+<a href="http://rtomayko.github.com/rocco/rocco.html">Rocco</a>, the Ruby port that's
+available as a gem.</p></li>
+<li><p>If you're writing shell scripts, try
+<a href="http://rtomayko.github.com/shocco/">Shocco</a>, a port for the <strong>POSIX shell</strong>,
+also by Mr. Tomayko.</p></li>
+<li><p>If Python's more your speed, take a look at
+<a href="http://github.com/fitzgen">Nick Fitzgerald</a>'s <a href="http://fitzgen.github.com/pycco/">Pycco</a>.</p></li>
+<li><p>For <strong>Clojure</strong> fans, <a href="http://blog.fogus.me/">Fogus</a>'s
+<a href="http://fogus.me/fun/marginalia/">Marginalia</a> is a bit of a departure from
+"quick-and-dirty", but it'll get the job done.</p></li>
+<li><p><strong>Lua</strong> enthusiasts can get their fix with
+<a href="https://github.com/rgieseke">Robert Gieseke</a>'s <a href="http://rgieseke.github.com/locco/">Locco</a>.</p></li>
+<li><p>And if you happen to be a <strong>.NET</strong>
+aficionado, check out <a href="https://github.com/dontangg">Don Wilson</a>'s
+<a href="http://dontangg.github.com/nocco/">Nocco</a>.</p></li>
+</ul>                      <p>             <a href="#">Return to top</a>           </p>                    </section>                                  <section id="section-4">           <h3>How it works:</h3>
+
+<p>Taco parses your src files for comments. Taco is more about api documentation, and less about code commenting.
+This is how taco expects your comments to be setup.
+- 1st section - Introduction
+- 2nd section - Table of Contents (a nest ul list for navigation)
+- All subsequent sections are to be used for relevant api docs</p>
+
+<p>If you pass multiple files to taco, it will automatically add teh appropriate links to the topbar navigation.
+For example:</p>
+
+<p>$ taco js/*.js # this will add a link to the topbar for each navigation item generated</p>                      <p>             <a href="#">Return to top</a>           </p>                    </section>            </div>   </div> </body> </html> 

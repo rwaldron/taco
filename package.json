@@ -1,0 +1,21 @@
+{
+  "name":         "taco",
+  "description":  "A bootstrap styled docco fork.",
+  "keywords":     ["documentation", "docs", "generator", "coffeescript"],
+  "author":       "@fat",
+  "version":      "0.3.0",
+  "licenses": [{
+    "type":       "MIT",
+    "url":        "http://opensource.org/licenses/mit-license.php"
+  }],
+  "engines": {
+    "node":       ">=0.2.0"
+  },
+  "directories": {
+    "lib" :       "./lib"
+  },
+  "main" :        "./lib/taco",
+  "bin": {
+    "taco":      "./bin/taco"
+  }
+}
