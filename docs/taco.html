@@ -5,16 +5,18 @@
 <ul><li><a href="#section-3">Partners in Crime</a></li>
 <li><a href="#section-4">How it works</a></li>
 <li><a href="http://jashkenas.github.com/docco/">Original Docco</a></li></ul></li>
-</ul>     </div>     <div class="content">       <h1>taco.coffee</h1>                                   <section id="section-1">           <p><strong>taco</strong> is a quick-and-dirty, hundred-line-long, literate-programming-style
-documentation generator. It produces HTML that displays your comments
-alongside your code. Comments are passed through
+</ul>     </div>     <div class="content">       <h1>taco.coffee</h1>                                   <section id="section-1">           <p><strong>taco</strong> is a quick-and-dirty, hundred-line-long, docco-fork (a documentation
+generator). It produces HTML that does not display your comments
+alongside your code... because that isnt always great.</p>
+
+<p>Comments are passed through
 <a href="http://daringfireball.net/projects/markdown/syntax">Markdown</a>, and code is
 passed through <a href="http://pygments.org/">Pygments</a> syntax highlighting.
 This page is the result of running taco against its own source file.</p>
 
 <p>If you install taco, you can run it from the command-line:</p>
 
-<pre><code>taco src/*.coffee
+<pre><code>$ taco src/*.coffee
 </code></pre>
 
 <p>...will generate an HTML documentation page for each of the named source files,
@@ -28,8 +30,8 @@ and released under the MIT license.</p>
 from <a href="http://dev.pocoo.org/hg/pygments-main">its Mercurial repo</a>), and
 <a href="http://coffeescript.org/">CoffeeScript</a>. Then, with NPM:</p>
 
-<pre><code>sudo npm install taco
-</code></pre>                    </section>                                           <section id="section-3">           <h3>Partners in Crime:</h3>
+<pre><code>$ sudo npm install taco
+</code></pre>                    </section>                                           <section id="section-3">           <h3>Partners in Crime (lol, of docco ;):</h3>
 
 <ul>
 <li><p>If <strong>Node.js</strong> doesn't run on your platform, or you'd prefer a more
@@ -52,12 +54,16 @@ aficionado, check out <a href="https://github.com/dontangg">Don Wilson</a>'s
 </ul>                      <p>             <a href="#">Return to top</a>           </p>                    </section>                                  <section id="section-4">           <h3>How it works:</h3>
 
 <p>Taco parses your src files for comments. Taco is more about api documentation, and less about code commenting.
-This is how taco expects your comments to be setup.
-- 1st section - Introduction
-- 2nd section - Table of Contents (a nest ul list for navigation)
-- All subsequent sections are to be used for relevant api docs</p>
+This is how taco expects your comments to be setup.</p>
+
+<ul>
+<li>1st section - Introduction</li>
+<li>2nd section - Table of Contents (a nest ul list for navigation)</li>
+<li>All subsequent sections are to be used for relevant api docs</li>
+</ul>
 
 <p>If you pass multiple files to taco, it will automatically add teh appropriate links to the topbar navigation.
 For example:</p>
 
-<p>$ taco js/*.js # this will add a link to the topbar for each navigation item generated</p>                      <p>             <a href="#">Return to top</a>           </p>                    </section>            </div>   </div> </body> </html> 
+<pre><code>$ taco js/*.js # this will add a link to the topbar for each navigation item generated
+</code></pre>                      <p>             <a href="#">Return to top</a>           </p>                    </section>            </div>   </div> </body> </html> 
