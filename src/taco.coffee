@@ -58,6 +58,7 @@
 #
 # Taco parses your src files for comments. Taco is more about api documentation, and less about code commenting.
 # This is how taco expects your comments to be setup.
+#
 # - 1st section - Introduction
 # - 2nd section - Table of Contents (a nest ul list for navigation)
 # - All subsequent sections are to be used for relevant api docs
