@@ -1,6 +1,8 @@
-# **taco** is a quick-and-dirty, hundred-line-long, literate-programming-style
-# documentation generator. It produces HTML that displays your comments
-# alongside your code. Comments are passed through
+# **taco** is a quick-and-dirty, hundred-line-long, docco-fork (a documentation
+# generator). It produces HTML that does not display your comments
+# alongside your code... because that isnt always great.
+#
+# Comments are passed through
 # [Markdown](http://daringfireball.net/projects/markdown/syntax), and code is
 # passed through [Pygments](http://pygments.org/) syntax highlighting.
 # This page is the result of running taco against its own source file.
@@ -29,7 +31,7 @@
 #   - [How it works](#section-4)
 #   - [Original Docco](http://jashkenas.github.com/docco/)
 
-# ### Partners in Crime:
+# ### Partners in Crime (lol, of docco ;):
 #
 # * If **Node.js** doesn't run on your platform, or you'd prefer a more
 # convenient package, get [Ryan Tomayko](http://github.com/rtomayko)'s
