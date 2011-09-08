@@ -7,7 +7,7 @@
 #
 # If you install taco, you can run it from the command-line:
 #
-#     taco src/*.coffee
+#     $ taco src/*.coffee
 #
 # ...will generate an HTML documentation page for each of the named source files,
 # with a menu linking to the other pages, saving it into a `docs` folder.
@@ -20,7 +20,7 @@
 # from [its Mercurial repo](http://dev.pocoo.org/hg/pygments-main)), and
 # [CoffeeScript](http://coffeescript.org/). Then, with NPM:
 #
-#     sudo npm install taco
+#     $ sudo npm install taco
 #
 
 # ### Contents
@@ -58,6 +58,7 @@
 #
 # Taco parses your src files for comments. Taco is more about api documentation, and less about code commenting.
 # This is how taco expects your comments to be setup.
+#
 # - 1st section - Introduction
 # - 2nd section - Table of Contents (a nest ul list for navigation)
 # - All subsequent sections are to be used for relevant api docs
@@ -65,7 +66,7 @@
 # If you pass multiple files to taco, it will automatically add teh appropriate links to the topbar navigation.
 # For example:
 #
-#    $ taco js/*.js # this will add a link to the topbar for each navigation item generated
+#     $ taco js/*.js # this will add a link to the topbar for each navigation item generated
 
 generate_documentation = (source, callback) ->
   fs.readFile source, "utf-8", (error, code) ->
